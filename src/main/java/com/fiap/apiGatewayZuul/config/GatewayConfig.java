@@ -17,6 +17,8 @@ public class GatewayConfig {
                 .uri("lb://productRegistry"))
             .route("orderManagement", r -> r.path("/orderManagement/api/order/**")
             	.uri("lb://orderManagement"))
+            .route("DeliverLogistic", r -> r.path("/deliverLogistic/api/courier/**")
+                	.uri("lb://DeliverLogistic"))
             .build();
     }
 }
